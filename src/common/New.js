@@ -25,8 +25,8 @@ export default class New extends React.Component {
                 </View>
 
                 <View style={{ width: "65%", justifyContent: "flex-end", paddingHorizontal: 10, height: "100%" }}>
-                    <Text style={{ fontSize: 8, fontFamily: "Medium", }}>
-                        {this.props.data.description}
+                    <Text numberOfLines={2} style={{ fontSize: 8, fontFamily: "Medium", }}>
+                        {this.props.data.name.trim()}
                     </Text>
                     <Text style={{ fontSize: 11, fontFamily: "Bold", }}>
                         ₹ {this.props.data.price}

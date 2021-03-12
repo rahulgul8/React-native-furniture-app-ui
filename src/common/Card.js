@@ -11,13 +11,14 @@ export default class Couches extends React.Component {
                     <Text numberOfLines={1} style={{ fontFamily: "Bold", color: "#4f4a4a", fontSize: 12 }}>
                         {this.props.data.name}
                     </Text>
-                    <View style={{ height: 4, width: 4, borderRadius: 4, backgroundColor: "red", marginHorizontal: 4 }}>
+                    {this.props.data.highlight && (<React.Fragment><View style={{ height: 4, width: 4, borderRadius: 4, backgroundColor: "red", marginHorizontal: 4 }}>
                     </View>
-                    <Text style={{ color: "red", fontSize: 9, fontFamily: "Bold" }}>
-                        {this.props.data.highlight}
-                    </Text>
+                        <Text style={{ color: "red", fontSize: 9, fontFamily: "Bold" }}>
+                            {this.props.data.highlight}
+                        </Text>
+                    </React.Fragment>)}
                 </View>
-                <Text numberOfLines={2}  style={{ fontSize: 9, color: "#4f4a4a", fontFamily: "Regular" }}>
+                <Text numberOfLines={2} style={{ fontSize: 9, color: "#4f4a4a", fontFamily: "Regular" }}>
                     {this.props.data.description.trim()}
                 </Text>
                 <View style={{ flexDirection: "row", marginTop: 5, alignItems: "center", width: "100%" }}>

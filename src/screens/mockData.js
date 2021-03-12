@@ -1,10 +1,17 @@
 export const products = [{
     id: 1,
-    name: 'Beautiful Couches',
+    name: 'GPON OLT 8 PON (V1600G1) (With C++ Module) – NETLINK',
     image: { uri: 'https://www.netlinkict.com/wp-content/uploads/2018/12/V1600G1.jpg' },
-    description: 'Full sleeves short dress with three attractive colors and available in various sizes',
-    price: 500,
-    highlight: 'new'
+    description: `Support High Performance Layer 3 Switching
+    Dual power supply (optional)
+    48v DC, 12vDC power supply(optional)
+    Support Netcare app
+    Fast ONU Register
+    Credit Time Control
+    ONT Auto Detect and ONT Firmware Auto Up-grade
+    WEB/CLl/EMS Management
+    *GST  will be add extra at checkout`,
+    price: 510,
 }, {
     id: 2,
     name: 'GPON ONT (1GE+IFE+1POTS+WIFI)(HG323RGW) (Dual Mode GPON/EPON)',
@@ -24,13 +31,27 @@ export const products = [{
 
 *GST will be add extra at checkout
 `,
-    price: 1500,
-    highlight: 'new'
+    price: 1530,
 }, {
     id: 3,
-    name: 'Beautiful Couches',
-    image: { uri: 'https://www.netlinkict.com/wp-content/uploads/2018/12/V1600G1.jpg' },
-    description: 'Full sleeves short dress with three attractive colors and available in various sizes',
-    price: 700,
-    highlight: 'new'
+    name: 'GPON ONT(1GE Secure ONT)(V2801SG) – NETLINK',
+    image: { uri: 'https://www.netlinkict.com/wp-content/uploads/2018/12/V2801SG.jpg' },
+    description: `► Dual mode(Can access EPON/GPON OLTs)
+
+    ►  Compatible with popular OLT(HW,ZTE…)
+    
+    ►  Industrial Design
+    
+    ► Routing or Bridging Mode
+    
+    ►  Detecting Rogue ONT
+    
+    ►  Flow & Storm Control , Loop Detection
+    
+    ►  Firewall: DDOS, Filtering Based on ACL/MAC/URL
+    
+    ►  O&M: WEB/TELNET/OAM(OMCI)/TR069
+    
+    *GST will be added at chekout.`,
+    price: 910
 }]
