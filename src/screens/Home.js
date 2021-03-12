@@ -50,9 +50,7 @@ export default class Home extends React.Component {
                 </CardSection>
 
                 <CardSection title="Best Sellers">
-                    <Best />
-                    <Best />
-                    <Best />
+                    {products.map(d => <Card data={d} key={d.id} navigation={this.props.navigation} />)}
                 </CardSection>
             </ScrollView>
         );
