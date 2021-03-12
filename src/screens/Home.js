@@ -7,7 +7,7 @@ import New from '../common/New'
 import Best from '../common/Best'
 import CardSection from '../common/CardSection';
 import { products } from './mockData'
-
+import { images, COLORS, FONTS } from '../../constants';
 
 export default class Home extends React.Component {
 

@@ -90,25 +90,26 @@ export default class Detail extends React.Component {
     }
 
     render() {
+        const { name, price, description, image } = this.props.navigation.state.params.data;
         return (
             <ScrollView showsVerticalScrollIndicator={false} style={{ backgroundColor: "#fff", paddingHorizontal: 20 }} >
                 {this.renderHeader()}
                 <View style={{ flexDirection: "row", height: 340, width: "100%" }}>
                     {this.colorBox()}
-                    <SwiperComponent />
+                    <SwiperComponent images={[image]} />
                 </View>
                 <View style={{ width: "100%", alignItems: "flex-end" }}>
                     <Image source={require('../images/save.png')} style={{ marginTop: -45, width: 15, height: 20 }} />
                 </View>
                 <View style={{ flexDirection: "row", alignItems: "center", width: 15, marginTop: 20, width: "100%" }}>
                     <View style={{ width: "65%" }}>
-                        <Text style={{ fontFamily: "Bold", fontSize: 18, color: "#4f4a4a" }}>Autobe best Chair</Text>
+                        <Text style={{ fontFamily: "Bold", fontSize: 18, color: "#4f4a4a" }}>{name}</Text>
                     </View>
                     {this.reviews()}
                 </View>
-                <Text style={{ fontFamily: "Bold", fontSize: 16, color: "#b3aeae" }}>324.69 USD</Text>
+                <Text style={{ fontFamily: "Bold", fontSize: 16, color: "#b3aeae" }}>{price} ₹</Text>
                 <Text style={{ fontFamily: "Medium", fontSize: 14, lineHeight: 20, color: "#b3aeae", marginTop: 20 }}>
-                    Full sleeves short dress with three attractive colors and available in various sizes.
+                    {description}
                 </Text>
                 {this.others()}
                 <View style={{ marginTop: 20, backgroundColor: "#000", flexDirection: "row", alignItems: "center", justifyContent: "center", borderRadius: 10, padding: 12, marginBottom: 15 }}>

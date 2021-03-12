@@ -5,7 +5,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 export default class Couches extends React.Component {
     render() {
         return (
-            <TouchableOpacity onPress={() => this.props.navigation.navigate('Detail')} style={styles.container}>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('Detail', { data: this.props.data })} style={styles.container}>
                 <Image source={this.props.data.image} style={{ width: 170, height: 110, borderRadius: 10 }} />
                 <View style={{ flexDirection: "row", alignItems: "center", marginVertical: 10 }}>
                     <Text numberOfLines={1} style={{ fontFamily: "Bold", color: "#4f4a4a", fontSize: 12 }}>
