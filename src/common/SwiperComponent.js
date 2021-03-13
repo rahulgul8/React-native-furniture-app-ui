@@ -33,8 +33,8 @@ export default class SwiperComponent extends React.Component {
         if (this.props.images) {
             return (
                 <Swiper style={styles.wrapper} dotStyle={styles.dotStyle} activeDotColor="#FFF" activeDotStyle={styles.activeDotStyle}>
-                    {this.props.images.map((d, index) => (<View style={styles.slide}>
-                        <Image source={d} key={index} style={{ height: 300, width: 300 }} />
+                    {this.props.images.map((d, index) => (<View style={styles.slide} key={index}>
+                        <Image source={d} style={{ height: 300, width: 300 }} />
                     </View>))}
                 </Swiper>
             )

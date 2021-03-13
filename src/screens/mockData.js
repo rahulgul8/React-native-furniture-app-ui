@@ -55,3 +55,23 @@ export const products = [{
     *GST will be added at chekout.`,
     price: 910
 }]
+
+export const addresses = [{
+    id: 1,
+    name: 'Rahul K',
+    phoneNumber: '9025638382',
+    city: 'Chennai',
+    pincode: '607002',
+    addressLine1: '23, 3rd cross street',
+    addressLine2: 'kammiyapettai',
+    state: 'Tamilnadu'
+}, {
+    id: 2,
+    name: 'Mounish K',
+    phoneNumber: '9025638382',
+    city: 'Chennai',
+    pincode: '607002',
+    addressLine1: '23, 3rd cross street',
+    addressLine2: 'kammiyapettai',
+    state: 'Tamilnadu'
+}]

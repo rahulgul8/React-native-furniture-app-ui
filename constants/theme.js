@@ -18,7 +18,7 @@ export const COLORS = {
     darkGray: '#898C95',
     transparentLightGray: '#CCD4D5D6',
     transparentLightGray1: 'rgba(255,255,255,0.7)',
-    background: '#caf0f8'
+    background: '#0077b6'
 };
 
 export const SIZES = {

@@ -1,54 +1,17 @@
 import React from 'react'
-import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native'
+import { View, Text, Image, TouchableOpacity, StyleSheet, TouchableHighlight } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import SwiperComponent from '../common/SwiperComponent'
 import Stars from 'react-native-stars';
 import { ScrollView } from 'react-native-gesture-handler';
+import { Feather } from '@expo/vector-icons';
+import BackHeader from '../common/BackHeader';
 
 
-const styles = StyleSheet.create({
-    myStarStyle: {
-        color: "#000",
-        backgroundColor: 'transparent',
-        textShadowColor: "black",
-        textShadowOffset: { width: 1, height: 1 },
-        textShadowRadius: 2
-    },
-    myEmptyStarStyle: {
-        color: "white"
-    },
-    colorBox: {
-        height: 25,
-        width: 25,
-        borderRadius: 5,
-        borderWidth: 2,
-        borderColor: "#FFF",
-        elevation: 5
-    },
-    more: {
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "#f5f6fb",
-        height: 80,
-        width: 80,
-        borderRadius: 25,
-        marginRight: 20
-    }
-});
+
 
 
 export default class Detail extends React.Component {
-
-    renderHeader = () => {
-        return (<View style={{ flexDirection: "row", width: "100%", marginTop: 40 }}>
-            <TouchableOpacity onPress={() => this.props.navigation.goBack()} style={{ width: "50%" }}>
-                <Image source={require('../images/back.png')} style={{ width: 15, height: 15 }} />
-            </TouchableOpacity>
-            <View style={{ width: "50%", alignItems: "flex-end" }}>
-                <Image source={require('../images/bag-2.png')} style={{ width: 16, height: 20 }} />
-            </View>
-        </View>);
-    }
 
     colorBox = () => {
         return (<View style={{ marginTop: 150 }}>
@@ -93,7 +56,7 @@ export default class Detail extends React.Component {
         const { name, price, description, image } = this.props.navigation.state.params.data;
         return (
             <ScrollView showsVerticalScrollIndicator={false} style={{ backgroundColor: "#fff", paddingHorizontal: 20 }} >
-                {this.renderHeader()}
+                <BackHeader navigation={this.props.navigation} />
                 <View style={{ flexDirection: "row", height: 340, width: "100%" }}>
                     {this.colorBox()}
                     <SwiperComponent images={[image]} />
@@ -112,13 +75,56 @@ export default class Detail extends React.Component {
                     {description}
                 </Text>
                 {this.others()}
-                <View style={{ marginTop: 20, backgroundColor: "#000", flexDirection: "row", alignItems: "center", justifyContent: "center", borderRadius: 10, padding: 12, marginBottom: 15 }}>
-                    <Image source={require('../images/bag.png')} style={{ height: 20, width: 16 }} />
-                    <Text style={{ fontSize: 20, color: "#FFF", fontFamily: "Bold", marginHorizontal: 15 }}>
-                        Add to Cart
+                <TouchableHighlight style={styles.button} onPress={() => this.props.navigation.navigate('ChooseAddress')}>
+                    <View style={{ flexDirection: 'row', flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+                        <Feather name="shopping-bag" size={24} color="white" />
+                        <Text style={{ fontSize: 20, color: "#FFF", fontFamily: "Bold", marginHorizontal: 15 }}>
+                            Buy now
                     </Text>
-                </View>
+                    </View>
+                </TouchableHighlight>
             </ScrollView>
         );
     }
 }
+
+
+const styles = StyleSheet.create({
+    myStarStyle: {
+        color: "#000",
+        backgroundColor: 'transparent',
+        textShadowColor: "black",
+        textShadowOffset: { width: 1, height: 1 },
+        textShadowRadius: 2
+    },
+    myEmptyStarStyle: {
+        color: "white"
+    },
+    colorBox: {
+        height: 25,
+        width: 25,
+        borderRadius: 5,
+        borderWidth: 2,
+        borderColor: "#FFF",
+        elevation: 5
+    },
+    more: {
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "#f5f6fb",
+        height: 80,
+        width: 80,
+        borderRadius: 25,
+        marginRight: 20
+    },
+    button: {
+        marginTop: 20,
+        backgroundColor: "#000",
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "center",
+        borderRadius: 10,
+        padding: 12,
+        marginBottom: 15
+    }
+});
