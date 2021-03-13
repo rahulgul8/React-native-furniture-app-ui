@@ -37,10 +37,13 @@ export default class Home extends React.Component {
     }
 
     render() {
-        return (
-            <ScrollView showsVerticalScrollIndicator={false} style={{ backgroundColor: "#fff", paddingHorizontal: 20 }} >
+        return (<React.Fragment>
+            <View style={{ backgroundColor: COLORS.background, paddingHorizontal: 20, paddingBottom: 20 }}>
                 {this.renderHeader()}
                 {this.searchBar()}
+            </View>
+            <ScrollView showsVerticalScrollIndicator={false} style={{ backgroundColor: COLORS.white, paddingHorizontal: 20 }} >
+
                 <CardSection title="Modern" subtitle="Good Quality items">
                     {products.map(d => <Card data={d} key={d.id} navigation={this.props.navigation} />)}
                 </CardSection>
@@ -53,6 +56,7 @@ export default class Home extends React.Component {
                     {products.map(d => <Card data={d} key={d.id} navigation={this.props.navigation} />)}
                 </CardSection>
             </ScrollView>
+        </React.Fragment>
         );
     }
 }
