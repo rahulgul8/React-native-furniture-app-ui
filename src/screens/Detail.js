@@ -6,6 +6,7 @@ import Stars from 'react-native-stars';
 import { ScrollView } from 'react-native-gesture-handler';
 import { Feather } from '@expo/vector-icons';
 import BackHeader from '../common/BackHeader';
+import { COLORS } from '../../constants';
 
 
 
@@ -70,7 +71,7 @@ export default class Detail extends React.Component {
                     </View>
                     {this.reviews()}
                 </View>
-                <Text style={{ fontFamily: "Bold", fontSize: 16, color: "#b3aeae" }}>{price} ₹</Text>
+                <Text style={{ fontFamily: "Bold", fontSize: 20, color: COLORS.black, marginTop: 10 }}> ₹ {price}</Text>
                 <Text style={{ fontFamily: "Medium", fontSize: 14, lineHeight: 20, color: "#b3aeae", marginTop: 20 }}>
                     {description}
                 </Text>

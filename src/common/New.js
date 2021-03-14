@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Image, Text, StyleSheet } from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const styles = StyleSheet.create({
     container: {
@@ -19,7 +20,7 @@ const styles = StyleSheet.create({
 export default class New extends React.Component {
     render() {
         return (
-            <View style={styles.container}>
+            <TouchableOpacity style={styles.container} onPress={() => this.props.navigation.navigate('Detail', { data: this.props.data })}>
                 <View>
                     <Image source={this.props.data.image} style={{ height: 50, width: 60, borderRadius: 10 }} />
                 </View>
@@ -36,7 +37,7 @@ export default class New extends React.Component {
                     <Image source={require('../images/add.png')} style={{ height: 17, width: 17 }} />
                 </View>
 
-            </View>
+            </TouchableOpacity>
         )
     }
 }

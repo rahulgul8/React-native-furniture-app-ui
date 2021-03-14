@@ -7,7 +7,7 @@ import Card from '../common/Card'
 import New from '../common/New'
 import Best from '../common/Best'
 import CardSection from '../common/CardSection';
-import { products } from './mockData'
+import { products, newArrivals, bestSellers } from './mockData'
 import { images, COLORS, FONTS } from '../../constants';
 
 export default class Home extends React.Component {
@@ -49,16 +49,16 @@ export default class Home extends React.Component {
                     {this.searchBar()}
                 </View>
                 <View style={{ paddingHorizontal: 20, paddingBottom: 20 }}>
-                    <CardSection title="Modern" subtitle="Good Quality items">
+                    <CardSection title="Featured" subtitle="Good Quality items">
                         {products.map(d => <Card data={d} key={d.id} navigation={this.props.navigation} />)}
                     </CardSection>
 
                     <CardSection title="New Arrivals" subtitle="Good Quality items">
-                        {products.map(d => <New data={d} key={d.id} />)}
+                        {newArrivals.map(d => <New data={d} key={d.id} navigation={this.props.navigation} />)}
                     </CardSection>
 
                     <CardSection title="Best Sellers">
-                        {products.map(d => <Card data={d} key={d.id} navigation={this.props.navigation} />)}
+                        {bestSellers.map(d => <Card data={d} key={d.id} navigation={this.props.navigation} />)}
                     </CardSection>
                 </View>
             </ScrollView>

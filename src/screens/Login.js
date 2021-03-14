@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, SafeAreaView, Text, Button, TouchableHighlight, Image, ImageBackground } from 'react-native';
+import { View, StyleSheet, SafeAreaView, Text, Button, TouchableHighlight, Image, ImageBackground, TouchableOpacity } from 'react-native';
 import { images, COLORS, FONTS } from '../../constants';
 import IconButton from '../common/IconButton';
 import { AntDesign } from '@expo/vector-icons';
+import { FontAwesome } from '@expo/vector-icons';
 
 export default class Login extends Component {
     constructor(props) {
@@ -14,36 +15,35 @@ export default class Login extends Component {
     render() {
         return (
             <SafeAreaView style={styles.container}>
-                <View style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
+                <View style={{ alignItems: 'center', marginBottom: 25 }}>
                     <Image source={images.logo} style={styles.logo}></Image>
-                    <Text style={{ textAlign: 'center', ...FONTS.h1, color: COLORS.black, fontWeight: 'bold' }}>SUZHI</Text>
+                    <Text style={{ textAlign: 'center', ...FONTS.h1, color: COLORS.black, fontWeight: 'bold', marginTop: 10 }}>SUZHI</Text>
                     <Text style={styles.label}>For All Your Telecom Needs</Text>
-                    {/* <ImageBackground source={images.bottom} style={{
-                        height: 300,
-                        width: 300,
-                        opacity: 0.7,
-                        position: 'absolute',
-                        bottom: -150,
-                        left: -50,
-
-                    }} >
-                    </ImageBackground> */}
                 </View>
-
-                <View style={styles.login}>
-                    <Text style={{ textAlign: 'center', ...FONTS.h2, color: COLORS.white, fontWeight: 'bold' }}>
-                        Welcome!
+                <View style={{ alignItems: 'center', padding: 20, marginBottom: 20 }}>
+                    <Text style={{ textAlign: 'center', ...FONTS.h2, fontWeight: 'bold', paddingBottom: 40 }}>
+                        Login to your Account
                     </Text>
-                    <TouchableHighlight style={styles.button} onPress={() => this.props.navigation.navigate("Home")}>
-                        <View style={styles.icon}>
-                            <AntDesign name="google" size={24} color="#900" />
-                            <Text style={styles.text}>Login with Google</Text>
-                        </View>
-                    </TouchableHighlight>
-                    <Text style={{ textAlign: 'center', fontSize: 12, color: COLORS.gray }}>
-                        * By logging in, you agree to the terms and conditions
-                    </Text>
+                    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                        <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate("Home")}>
+                            <AntDesign name="google" size={40} color="#DB4437" />
+                        </TouchableOpacity>
+                        <View
+                            style={{
+                                height: 70,
+                                width: 2,
+                                backgroundColor: COLORS.gray,
+                                marginVertical: 25,
+                            }}
+                        />
+                        <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate("Home")}>
+                            <FontAwesome name="facebook" size={40} color="#4267B2" />
+                        </TouchableOpacity>
+                    </View>
                 </View>
+                <Text style={{ textAlign: 'center', fontSize: 12, color: COLORS.gray }}>
+                    * By logging in, you agree to the terms and conditions
+                    </Text>
             </SafeAreaView >
         );
     }
@@ -54,29 +54,35 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: 'column',
-        justifyContent: 'space-around',
+        justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: COLORS.white
     },
     button: {
-        color: COLORS.white,
-        textAlign: 'center',
-        backgroundColor: COLORS.black,
-        paddingVertical: 15,
-        marginHorizontal: 70,
-        borderRadius: 10
+        borderWidth: 1,
+        padding: 10,
+        borderRadius: 10,
+        borderColor: COLORS.black,
+        marginHorizontal: 20,
+        width: 60,
+        justifyContent: 'center',
+        alignItems: 'center'
     },
     label: {
         ...FONTS.h3,
         color: COLORS.darkGray,
         textAlign: 'center',
-        paddingVertical: 10
+        paddingVertical: 5
+    },
+    logo: {
+        height: 120,
+        width: 120,
+        marginTop: 10,
     },
     icon: {
         display: 'flex',
         justifyContent: 'space-evenly',
         flexDirection: 'row'
-
     },
     text: {
         color: COLORS.white,
@@ -88,7 +94,6 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         alignSelf: 'stretch',
         backgroundColor: COLORS.background,
-        flex: 0.6,
         borderRadius: 35,
         justifyContent: 'space-evenly',
         elevation: 50,

@@ -23,7 +23,7 @@ export default class Couches extends React.Component {
                 </Text>
                 <View style={{ flexDirection: "row", marginTop: 5, alignItems: "center", width: "100%" }}>
                     <View style={{ width: "80%" }}>
-                        <Text style={{ fontSize: 15, fontFamily: "Bold" }}>{this.props.data.price} ₹</Text>
+                        <Text style={{ fontSize: 15, fontFamily: "Bold" }}>₹ {this.props.data.price} </Text>
                     </View>
                     <View style={{ width: "20%" }}>
                         <Image source={require('../images/add.png')} style={{ alignSelf: "flex-end", width: 25, height: 25 }} />
