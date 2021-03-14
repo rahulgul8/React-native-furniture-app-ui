@@ -8,6 +8,7 @@ import ChooseAddress from '../screens/ChooseAddress'
 
 import { AppLoading } from 'expo'
 import ReviewOrder from '../screens/ReviewOrder';
+import EditAddress from '../screens/EditAddress';
 
 const stackNavigatorOptions = {
     headerShown: false
@@ -19,7 +20,8 @@ const AppNavigator = createStackNavigator({
     Detail: { screen: Detail },
     ChooseAddress: { screen: ChooseAddress },
     ReviewOrder: { screen: ReviewOrder },
-    Payment: { screen: Payment }
+    Payment: { screen: Payment },
+    EditAddress: { screen: EditAddress }
 },
     {
         defaultNavigationOptions: stackNavigatorOptions

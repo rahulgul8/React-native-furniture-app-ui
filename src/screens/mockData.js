@@ -75,3 +75,18 @@ export const addresses = [{
     addressLine2: 'kammiyapettai',
     state: 'Tamilnadu'
 }]
+
+export const cards = [{
+    id: 1,
+    type: 'VISA',
+    cardNumber: "4018-XXXX-XXXX-3098",
+    cardType: 'DEBIT CARD',
+    bank: 'HDFC'
+},
+{
+    id: 2,
+    type: 'VISA',
+    cardNumber: "4018-XXXX-XXXX-3098",
+    cardType: 'DEBIT CARD',
+    bank: 'HDFC'
+}]

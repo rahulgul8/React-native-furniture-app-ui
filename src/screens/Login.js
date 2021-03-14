@@ -18,7 +18,7 @@ export default class Login extends Component {
                     <Image source={images.logo} style={styles.logo}></Image>
                     <Text style={{ textAlign: 'center', ...FONTS.h1, color: COLORS.black, fontWeight: 'bold' }}>SUZHI</Text>
                     <Text style={styles.label}>For All Your Telecom Needs</Text>
-                    <ImageBackground source={images.bottom} style={{
+                    {/* <ImageBackground source={images.bottom} style={{
                         height: 300,
                         width: 300,
                         opacity: 0.7,
@@ -27,7 +27,7 @@ export default class Login extends Component {
                         left: -50,
 
                     }} >
-                    </ImageBackground>
+                    </ImageBackground> */}
                 </View>
 
                 <View style={styles.login}>

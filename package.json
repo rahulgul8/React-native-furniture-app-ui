@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@react-native-community/masked-view": "0.1.10",
+    "@react-native-picker/picker": "^1.9.12",
     "expo": "~38.0.8",
     "expo-status-bar": "^1.0.2",
     "react": "~16.11.0",

@@ -56,9 +56,9 @@ export default class Detail extends React.Component {
         const { name, price, description, image } = this.props.navigation.state.params.data;
         return (
             <ScrollView showsVerticalScrollIndicator={false} style={{ backgroundColor: "#fff", paddingHorizontal: 20 }} >
-                <BackHeader navigation={this.props.navigation} />
+                <BackHeader navigation={this.props.navigation} title="Details" />
                 <View style={{ flexDirection: "row", height: 340, width: "100%" }}>
-                    {this.colorBox()}
+                    {/* {this.colorBox()} */}
                     <SwiperComponent images={[image]} />
                 </View>
                 <View style={{ width: "100%", alignItems: "flex-end" }}>
@@ -74,8 +74,8 @@ export default class Detail extends React.Component {
                 <Text style={{ fontFamily: "Medium", fontSize: 14, lineHeight: 20, color: "#b3aeae", marginTop: 20 }}>
                     {description}
                 </Text>
-                {this.others()}
-                <TouchableHighlight style={styles.button} onPress={() => this.props.navigation.navigate('ChooseAddress')}>
+                {/* {this.others()} */}
+                <TouchableHighlight style={styles.button} onPress={() => this.props.navigation.navigate('ChooseAddress', { data: this.props.navigation.state.params.data })}>
                     <View style={{ flexDirection: 'row', flex: 1, alignItems: 'center', justifyContent: 'center' }}>
                         <Feather name="shopping-bag" size={24} color="white" />
                         <Text style={{ fontSize: 20, color: "#FFF", fontFamily: "Bold", marginHorizontal: 15 }}>

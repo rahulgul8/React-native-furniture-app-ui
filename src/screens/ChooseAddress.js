@@ -14,6 +14,7 @@ export default class ChooseAddress extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            currentSelectedItem: 0
         };
     }
 
@@ -39,17 +40,28 @@ export default class ChooseAddress extends Component {
 
 
     footer = () => {
-        return (<IconButton style={{}}>
-            <FontAwesome5 style={{ marginHorizontal: 10 }} name="address-card" size={20} color="white" />
-            <Text style={{ color: 'white' }}>Add a new Address</Text>
+        return (<IconButton style={{ backgroundColor: 'white', borderWidth: 1, marginVertical: 15 }} opacity={true} onPress={() => this.props.navigation.navigate('EditAddress')}>
+            <FontAwesome5 style={{ marginHorizontal: 10 }} name="address-card" size={20} color="black" />
+            <Text style={{ fontFamily: 'Medium' }}>Add a new Address</Text>
         </IconButton>)
+    }
+
+    onPress = (idx) => {
+        this.setState({ currentSelectedItem: idx });
     }
 
 
     render() {
         return (<FlatList
             style={{ backgroundColor: "#fff", paddingHorizontal: 20 }}
-            renderItem={({ item }) => <AddressItem address={item} />}
+            renderItem={({ item, index }) => {
+                let isChecked = this.state.currentSelectedItem === index ? true : false;
+                return <AddressItem address={item} isChecked={isChecked} onPress={() => this.onPress(index)}
+                    onSubmit={() => {
+                        this.props.navigation.navigate('Payment', { address: item, data: this.props.navigation.state.params.data })
+                    }}
+                />
+            }}
             data={addresses} keyExtractor={item => `${item.id}`}
             ListHeaderComponent={this.header()}
             ListFooterComponent={this.footer()}

@@ -15,7 +15,7 @@ export default function RadioButton(props) {
                     justifyContent: 'center',
                 }, props.style]}>
                     {
-                        props.selected ?
+                        props.isChecked ?
                             <View style={{
                                 height: 12,
                                 width: 12,
@@ -25,7 +25,7 @@ export default function RadioButton(props) {
                             : null
                     }
                 </View>
-                <View style={{ marginLeft: 20 }}>{props.children}</View>
+                <View style={{ marginLeft: 20, flex: 1 }}>{props.children}</View>
             </View>
         </TouchableOpacity>
     );
