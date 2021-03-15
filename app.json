@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "Suzhi",
+    "owner": "rahulgul8",
     "slug": "Suzhi",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -17,13 +18,16 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "tech.oorga.suzhi",
+      "buildNumber": "1.0.0"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "android": {
-      "package": "tech.oorga.suzhi"
+      "package": "tech.oorga.suzhi",
+      "versionCode": 1
     }
   }
 }

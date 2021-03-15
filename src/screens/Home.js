@@ -16,10 +16,10 @@ export default class Home extends React.Component {
     renderHeader = () => {
         return (<View style={{ flexDirection: "row", width: "100%", marginTop: 40, alignItems: "center" }}>
             <View style={{ width: "10%" }}>
-                <Entypo name="menu" size={24} color="black" />
+                <Entypo name="menu" size={24} color="white" />
             </View>
             <View style={{ width: "50%" }}>
-                <Text style={{ fontFamily: "Bold", fontSize: 22 }}>Suzhi</Text>
+                <Text style={{ fontFamily: "Title", fontSize: 28, color: 'white' }}>Suzhi</Text>
             </View>
             <View style={{ width: "40%", alignItems: "flex-end" }}>
                 <Image source={require('../images/bag-2.png')} style={{ width: 16, height: 20 }} />

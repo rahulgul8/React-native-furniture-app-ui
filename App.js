@@ -14,6 +14,7 @@ export default class App extends React.Component {
       'Bold' : require('./src/fonts/Montserrat-ExtraBold.otf'),
       'Medium' : require('./src/fonts/Montserrat-Medium.otf'),
       'Regular' : require('./src/fonts/Montserrat-Regular.otf'),
+      'Title' : require('./src/fonts/carnavonts.otf'),
     });
     this.setState({isFontLoaded:true})
   }

@@ -36,22 +36,22 @@ export default class Detail extends React.Component {
         </View>)
     }
 
-    others = () => {
-        return (<ScrollView style={{ marginTop: 40 }} horizontal showsHorizontalScrollIndicator={false}>
-            <View style={styles.more}>
-                <Image source={require('../images/12.png')} style={{ height: 80, width: 80 }} />
-            </View>
-            <View style={styles.more}>
-                <Image source={require('../images/13.png')} style={{ height: 80, width: 80 }} />
-            </View>
-            <View style={styles.more}>
-                <Image source={require('../images/14.png')} style={{ height: 80, width: 80 }} />
-            </View>
-            <View style={styles.more}>
-                <Image source={require('../images/15.png')} style={{ height: 80, width: 80 }} />
-            </View>
-        </ScrollView>);
-    }
+    // others = () => {
+    //     return (<ScrollView style={{ marginTop: 40 }} horizontal showsHorizontalScrollIndicator={false}>
+    //         <View style={styles.more}>
+    //             <Image source={require('../images/12.png')} style={{ height: 80, width: 80 }} />
+    //         </View>
+    //         <View style={styles.more}>
+    //             <Image source={require('../images/13.png')} style={{ height: 80, width: 80 }} />
+    //         </View>
+    //         <View style={styles.more}>
+    //             <Image source={require('../images/14.png')} style={{ height: 80, width: 80 }} />
+    //         </View>
+    //         <View style={styles.more}>
+    //             <Image source={require('../images/15.png')} style={{ height: 80, width: 80 }} />
+    //         </View>
+    //     </ScrollView>);
+    // }
 
     render() {
         const { name, price, description, image } = this.props.navigation.state.params.data;

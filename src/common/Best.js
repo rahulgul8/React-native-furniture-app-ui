@@ -5,7 +5,7 @@ export default class Best extends React.Component {
     render() {
         return (
             <ImageBackground
-                source={require('../images/lr.png')}
+                // source={require('../images/upi.png')}
                 style={{
                     height: 130,
                     width: 230,

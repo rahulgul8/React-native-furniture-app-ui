@@ -17,7 +17,7 @@ export default class Login extends Component {
             <SafeAreaView style={styles.container}>
                 <View style={{ alignItems: 'center', marginBottom: 25 }}>
                     <Image source={images.logo} style={styles.logo}></Image>
-                    <Text style={{ textAlign: 'center', ...FONTS.h1, color: COLORS.black, fontWeight: 'bold', marginTop: 10 }}>SUZHI</Text>
+                    <Text style={styles.title}> Suzhi </Text>
                     <Text style={styles.label}>For All Your Telecom Needs</Text>
                 </View>
                 <View style={{ alignItems: 'center', padding: 20, marginBottom: 20 }}>
@@ -79,25 +79,11 @@ const styles = StyleSheet.create({
         width: 120,
         marginTop: 10,
     },
-    icon: {
-        display: 'flex',
-        justifyContent: 'space-evenly',
-        flexDirection: 'row'
-    },
-    text: {
-        color: COLORS.white,
-        ...FONTS.h3,
-        paddingHorizontal: 10
-    },
-    login: {
-        display: 'flex',
-        flexDirection: 'column',
-        alignSelf: 'stretch',
-        backgroundColor: COLORS.background,
-        borderRadius: 35,
-        justifyContent: 'space-evenly',
-        elevation: 50,
-        marginHorizontal: 10,
-        marginBottom: 10
+    title: {
+        fontFamily: 'Title', fontSize: 55, marginVertical: 10,
+        color: '#464444',
+        textShadowColor: '#444444',
+        textShadowOffset: { width: -2, height: 1 },
+        textShadowRadius: 10,
     }
 })
