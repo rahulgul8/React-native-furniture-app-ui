@@ -8,6 +8,7 @@ import New from '../common/New'
 import Best from '../common/Best'
 import CardSection from '../common/CardSection';
 import { products, newArrivals, bestSellers } from './mockData'
+import { Feather } from '@expo/vector-icons';
 import { images, COLORS, FONTS } from '../../constants';
 
 export default class Home extends React.Component {
@@ -22,7 +23,7 @@ export default class Home extends React.Component {
                 <Text style={{ fontFamily: "Title", fontSize: 28, color: 'white' }}>Suzhi</Text>
             </View>
             <View style={{ width: "40%", alignItems: "flex-end" }}>
-                <Image source={require('../images/bag-2.png')} style={{ width: 16, height: 20 }} />
+                <Feather name="shopping-bag" size={24} color="white" />
             </View>
         </View>);
     }
